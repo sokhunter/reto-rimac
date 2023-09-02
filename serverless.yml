@@ -120,4 +120,13 @@ functions:
 #       Description: "Description for the output"
 #       Value: "Some output value"
 plugins:
+  - serverless-auto-swagger
   - serverless-offline
+
+custom:
+  autoswagger:
+    useStage: true
+    basePath: '/dev'
+    generateSwaggerOnDeploy: false
+    typefiles: ['./src/repository/interfaces/planet.interface.ts']
+    apiType: 'httpApi'
