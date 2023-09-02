@@ -1,6 +1,7 @@
 import express from 'express';
-import serverless from 'serverless-http';
 import routes from './routes';
+import serverless from 'serverless-http';
+import './config/db.config';
 
 const app = express();
 
