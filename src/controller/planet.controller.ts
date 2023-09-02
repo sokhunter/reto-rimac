@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import * as planetService from "../service/planet.service";
-import { Planet } from "../repository/interfaces/planet.interface";
 
 export const getAll = async (req: Request, res: Response) => {
   try {
