@@ -7,6 +7,16 @@ export const getAll = async (req: Request, res: Response) => {
     res.status(200).json({ planets });
   } catch (error) {
     console.error('An error ocurred:', error);
-    res.status(500).json(error);
+    res.status(500).json({error});
+  }
+};
+
+export const getById = async (req: Request, res: Response) => {
+  try {
+    const planet = await planetService.getById(req.params.id);
+    res.status(200).json({ planet });
+  } catch (error) {
+    console.error('An error ocurred:', error);
+    res.status(500).json({error});
   }
 };
