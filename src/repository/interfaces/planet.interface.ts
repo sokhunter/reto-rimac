@@ -12,4 +12,5 @@ export interface Planet {
   url: string;
   f_creacion: Date;
   f_edicion: Date;
+  swapi_id?: string;
 }

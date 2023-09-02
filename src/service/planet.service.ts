@@ -1,3 +1,4 @@
+import { Planet } from '../repository/interfaces/planet.interface';
 import * as planetRepository from '../repository/planet.repository';
 
 export const getAll = async () => {
@@ -12,4 +13,13 @@ export const getById = async (id: string) => {
     throw 'Planet not found';
   }
   return planet[0];
+};
+
+export const create = async (body:Planet) => {
+  const result = await planetRepository.create(body);
+  if(result.affectedRows === 0) {
+    throw 'Planet not created';
+  }
+  body.id = result.insertId;
+  return body;
 };
