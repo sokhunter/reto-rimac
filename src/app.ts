@@ -23,3 +23,4 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 });
 
 export const handler = serverless(app);
+export default app;
