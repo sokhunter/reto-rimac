@@ -12,4 +12,7 @@ export const DATA_SOURCES = {
       DB_CONNECTION_LIMIT: process.env.MYSQL_DB_CONNECTION_LIMIT ? parseInt(process.env.MYSQL_DB_CONNECTION_LIMIT) : 4,
     }
   };
-  
+
+  export const SWAPI = {
+    url: process.env.SWAPI_URL
+  }
